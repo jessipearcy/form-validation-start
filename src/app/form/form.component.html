@@ -1,0 +1,49 @@
+<div class="form-container">
+  <form [formGroup]="contact" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <input
+        type="text"
+        id="firstName"
+        placeholder="First Name"
+        formControlName="firstName"
+      />
+    </div>
+    
+    <div class="input-group">
+      <input
+        type="text"
+        id="lastName"
+        placeholder="Last Name"
+        formControlName="lastName"
+      />
+    </div>
+
+    <div class="input-group">
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+    </div>
+
+    <div class="input-group">
+      <input
+        type="number"
+        id="quantity"
+        placeholder="Quantity"
+        formControlName="quantity"
+      />
+    </div>
+
+    <div class="input-group">
+      <textarea
+        id="message"
+        placeholder="Message"
+        formControlName="message"
+      ></textarea>
+    </div>
+
+    <button [disabled]="contact.invalid" type="submit">Submit</button>
+  </form>
+</div>
