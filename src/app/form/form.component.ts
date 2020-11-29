@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent {
-  public contact = new FormGroup({
+  public signup = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
@@ -16,7 +16,7 @@ export class FormComponent {
   });
 
   onSubmit() {
-    console.log(this.contact.value);
-    this.contact.reset();
+    console.log(this.signup.value);
+    this.signup.reset();
   }
 }
